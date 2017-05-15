@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+     <button id="menu_button" ion-button menuToggle side="left">
+      <ion-icon name="funnel"></ion-icon>
+	  Toggle Filter
+    </button>
+   <!-- <ion-title align-title="center">Business Guide</ion-title> -->
+	  <ion-buttons end>
+      <label id="username_label" >{{username}} </label>
+      <img id="user_image" [src]="imgSrc"  *ngIf="imgSrc" width="30" height="30" />
+      <button id="logout_button" ion-button (click)="Logout()">
+        <ion-icon name="close-circle"></ion-icon>
+        Log out
+      </button>
+      <button id="login_button" ion-button (click)="openLogInPage()">
+        <ion-icon name="log-in"></ion-icon>
+		Log in
+      </button>
+	  <button id="signup_button" ion-button (click)="openSignUpPage()">
+       <ion-icon name="add-circle"></ion-icon>
+		Sign Up
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Search" tabIcon="search"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+</ion-tabs>
